@@ -1,0 +1,40 @@
+*{
+    border:1px solid black;
+}
+
+body{
+    width:980px;
+}
+nav{
+    width:100%;
+}
+
+.author{
+    width:100%;
+}
+
+
+
+.books{
+    width:80%;
+}
+
+.books__all{
+    margin: 0 auto;
+    width: 80%;
+    height:300px;
+}
+.books__all-image{
+    width:40%;
+    height:inherit;
+}
+.books__all-description{
+    width:60%;
+    height:inherit;
+}
+
+
+
+.contact{
+    width:100%;
+}

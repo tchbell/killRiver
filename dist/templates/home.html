@@ -1,0 +1,49 @@
+<div class="row">
+    <div class="col-md-10">
+        <section class="about">
+                <h2>About Author</h2>
+                    <img  class="about__profilePic" src="">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam magna ante, viverra vitae vestibulum ut, volutpat ut quam. Suspendisse quis dapibus lectus. Fusce consectetur, ex pretium varius vehicula, risus quam imperdiet ligula, nec dapibus metus urna quis felis. Vestibulum elementum est viverra odio vulputate ultricies. Integer tempus risus et purus eleifend semper ac vitae ipsum. Vestibulum ut tristique sapien, vitae imperdiet est. Interdum et malesuada fames ac ante ipsum primis in faucibus. Phasellus vel rutrum elit.
+
+                    Donec hendrerit justo molestie neque ullamcorper, vel mattis diam malesuada. Nunc malesuada consequat neque, at feugiat mi blandit id. Proin suscipit leo id velit dictum ultrices. Maecenas ut vestibulum magna. Integer et justo sit amet tortor aliquam volutpat. Sed tempor commodo porta. Aliquam erat volutpat.
+                    </p>
+        </section>
+    </div>    
+</div>    
+<div class="row">
+    <div class="col-md-10">
+        <section class="books">
+            <h2>Books</h2>
+            <div class="row center-block">
+                <div class="col-md-4">
+                    <div class="books__all">
+                        <div class="books__all-image ">
+                            <img ng-src ="{{home.novels[0].image}}"/>
+                        </div>
+                        <button ng-click = "home.cycle()">Cycle</button>
+                        
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <div class="books__all-description center-block">
+                        {{home.bookName}}
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-6 center-block">
+        <section class="contact">
+            <h2>Contact</h2>
+            <div class="contact__socialMediaBtn">
+                <div class="box"><img src="images/amazonIcon.png"></div>
+                <div class="box"><img src="images/blogIcon.png"></div>
+                <div class="box"></div>
+            </div>
+        </section>
+    </div>    
+</div>
+    
+    <footer></footer>
