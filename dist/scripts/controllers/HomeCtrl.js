@@ -1,6 +1,7 @@
 (function () {
     function HomeCtrl() {
         
+        
         this.novels = books;
         this.test = 5;
         var counter = 0;
