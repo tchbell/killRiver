@@ -18,7 +18,7 @@
                 <div class="col-md-4">
                     <div class="books__all">
                         <div class="books__all-image ">
-                            <img ng-src ="{{home.novels[0].image}}"/>
+                            <img class="img-responsive" ng-src ="{{home.bookCover}}"/>
                         </div>
                         <button ng-click = "home.cycle()">Cycle</button>
                         
@@ -26,7 +26,9 @@
                 </div>
                 <div class="col-md-8">
                     <div class="books__all-description center-block">
-                        {{home.bookName}}
+                        <h2>{{home.bookName}}</h2>
+                        <p>{{home.bookDesc}}</p>
+                        <a href="{{home.bookBuy}}"><button>Buy Now!</button></a>
                     </div>
                 </div>
             </div>
@@ -38,9 +40,8 @@
         <section class="contact">
             <h2>Contact</h2>
             <div class="contact__socialMediaBtn">
-                <div class="box"><img src="images/amazonIcon.png"></div>
-                <div class="box"><img src="images/blogIcon.png"></div>
-                <div class="box"></div>
+                <div class="box"><a href="https://www.amazon.com/Cameron-Roubique/e/B0171542Q4/ref=dp_byline_cont_book_1"><img src="images/amazonIcon.png"></a></div>
+                <div class="box"><a href="http://cameronroubiqueauthor.blogspot.com/"><img src="images/blogIcon.png"></a></div>
             </div>
         </section>
     </div>    
