@@ -5,6 +5,13 @@ var autoprefixer = require('gulp-autoprefixer');
 var imagemin = require('gulp-imagemin');
 var browserSync = require('browser-sync').create();
  
+devBuild = (process.env.NODE_ENV !== 'production'),
+
+  // folders
+  folder = {
+    src: 'app/',
+    build: 'dist/'
+  };
 
 
 
@@ -42,4 +49,6 @@ gulp.task('browserSync', function(){
 gulp.task('watch', ['browserSync', 'css'], function(){
     gulp.watch('app/sass/**/*.scss', ['css'])
     gulp.watch('app/**/*.+(html|js)', ['copy'])
+});
+
 });
