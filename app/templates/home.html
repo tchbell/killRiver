@@ -1,9 +1,10 @@
 <div class="row">
-    <div class="col-md-10">
-        <section class="about">
-                <h2>About Author</h2>
-                    <img  class="about__profilePic" src="">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam magna ante, viverra vitae vestibulum ut, volutpat ut quam. Suspendisse quis dapibus lectus. Fusce consectetur, ex pretium varius vehicula, risus quam imperdiet ligula, nec dapibus metus urna quis felis. Vestibulum elementum est viverra odio vulputate ultricies. Integer tempus risus et purus eleifend semper ac vitae ipsum. Vestibulum ut tristique sapien, vitae imperdiet est. Interdum et malesuada fames ac ante ipsum primis in faucibus. Phasellus vel rutrum elit.
+    <div class="col-xs-10 col-xs-offset-1">
+        <section class="about clearfix">
+            <span class="anchor" id="about"></span>
+                <h2 class="headings">About Author</h2>
+                    <img  class="about__profilePic img-responsive" src="/images/author.png">
+                    <p class="main-txt">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam magna ante, viverra vitae vestibulum ut, volutpat ut quam. Suspendisse quis dapibus lectus. Fusce consectetur, ex pretium varius vehicula, risus quam imperdiet ligula, nec dapibus metus urna quis felis. Vestibulum elementum est viverra odio vulputate ultricies. Integer tempus risus et purus eleifend semper ac vitae ipsum. Vestibulum ut tristique sapien, vitae imperdiet est. Interdum et malesuada fames ac ante ipsum primis in faucibus. Phasellus vel rutrum elit.
 
                     Donec hendrerit justo molestie neque ullamcorper, vel mattis diam malesuada. Nunc malesuada consequat neque, at feugiat mi blandit id. Proin suscipit leo id velit dictum ultrices. Maecenas ut vestibulum magna. Integer et justo sit amet tortor aliquam volutpat. Sed tempor commodo porta. Aliquam erat volutpat.
                     </p>
@@ -11,21 +12,44 @@
     </div>    
 </div>    
 <div class="row">
-    <div class="col-md-10">
+    <div class="col-xs-10 col-xs-offset-1">
         <section class="books">
-            <h2>Books</h2>
-            <div class="books__all">
-                <div class="books__all-image">
+            <span class="anchor" id="books"></span>
+            <h2 class="headings">Books</h2>
+            <div class="row center-block">
+                <div class="col-xs-4">
+                    <div class="books__all">
+                        <div class="books__all-image ">
+                            <i class="fa fa-angle-left arrow-lft" aria-hidden="true" ng-click="home.cycleDown()"></i>
+                            <img class="img-responsive" ng-src ="{{home.bookCover}}"/>
+                            <i class="fa fa-angle-right arrow" aria-hidden="true" ng-click="home.cycleUp()"></i>
+                        </div>
+                        
+                    </div>
                 </div>
-
-                <div class="books__all-description">
+                <div class="col-xs-8">
+                    <div class="books__all-description center-block">
+                        <h2 class="headings">{{home.bookName}}</h2>
+                        <p class="main-txt">{{home.bookDesc}}</p>
+                        <a href="{{home.bookBuy}}"><button class="main-txt">Buy Now!</button></a>
+                    </div>
                 </div>
             </div>
         </section>
     </div>
-</div>    
-    <section class="contact">
-        <h2>Contact</h2>
-    </section>
-    
-    <footer></footer>
+</div> 
+<div class="row">
+    <div class="col-xs-6 col-xs-offset-3">
+        <span class="anchor" id="contact"></span>
+        <section class="contact">
+            <h2>Contact</h2>
+            <div class="contact__socialMediaBtn">
+                <div class="box"><a href="https://www.amazon.com/Cameron-Roubique/e/B0171542Q4/ref=dp_byline_cont_book_1"><img src="images/amazonIcon.png"></a></div>
+                <div class="box"><a href="http://cameronroubiqueauthor.blogspot.com/"><img src="images/blogIcon.png"></a>
+                </div>
+                <div><a href="https://twitter.com/lil_cam_ron" class="twitter-follow-button" data-show-count="false">Follow @lil_cam_ron</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+                    </div>
+            </div>
+        </section>
+    </div>    
+</div>

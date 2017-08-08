@@ -1,55 +1,176 @@
+body{
+    background-image:url(/images/015.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-size:cover;
+    
+}
+
+section{
+    background-color:white;
+    padding: 1em;
+}
+
+.headings{
+    font-family: 'Crimson Text', serif;
+}
+
+.main-txt{
+    font-family: 'Raleway', sans-serif;
+}
+
+p{
+    font-family: 'Raleway', sans-serif;
+}
 /*Nav*/
 .anchor {
   display: block;
-  height: 50px;
+  height: 82px;
   /* this is the height of your header */
-  margin-top: -50px;
+  margin-top: -82px;
   /* this is again negative value of the height of your header */
   visibility: hidden; 
 }
-nav{
-    border: 1px solid black;
-    padding: 1em 1em 0 1em;
+
+.page__nav{
     background-color:white;
+    font-size:1.5em;
+    width:90%;
+    margin: 0 auto;
+    position:fixed;
+    z-index: 1;
 }
-.nav li{
-    padding: 0 1em;
+.page__nav-li{
+    padding:1em;
+    display:inline-block;
+    float:left;
 }
 
 .mainLogo{
-    
+    font-size:2em;
+    font-family: 'Crimson Text', serif;
+    text-shadow: 2px 2px 5px #FFF;
+    margin-left:1em;
+    padding-top:.3em;
+}
+
+.page__nav-hamburger{
+    display:inline-block;
+    transition: transform 0.2s ease;
+    margin-bottom: 1em;
 }
 
 
 /*About*/
 
 .about{
-    margin: 50px auto 0;
+    margin-top: 9em;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0;
+
 }
 
 .about__profilePic{
-    width:200px;
-    height:300px;
+    max-width:100%;
+    height:auto;
     float:left;
     clear:both;
-    background-color:gray;
+    margin-right: 1em;
 }
 /*Books*/
 
-.books__all-image{
+.books{
+    margin-top:1em;
+}
 
+.books__all-image{
+    position:relative;
+    font-size:3em;
+    padding: .5em;
 }
 
 .books__all-description{
-    width: 400px;
-    height:300px;
+    max-width: 100%;
+    height: auto;
 }
 
+
+.arrow{
+    color:red;
+    opacity:.5;
+    position: absolute;
+    top:49%;
+    left:100%;
+    transform: translate(-50%, -97%);
+}
+
+.arrow:hover{
+    font-size:1.2em;
+    top:49%;
+    left:100%;
+    transform: translate(-51%, -101%);
+    opacity:1;
+}
+
+.arrow-lft{
+    color:red;
+    opacity:.5;
+    position: absolute;
+    top:49%;
+    right:96%;
+    transform:translate(-48%, -97%)
+}
+
+.arrow-lft:hover{
+    font-size:1.2em;
+    opacity: 1;
+    top:49%;
+    right:96%;
+    transform:translate(-49%, -89%)
+}
+
+
 /*Contact*/
+.contact{
+    margin: 1em 0;
+    text-align:center;
+}
 .box{
-    width:100px;
-    height:100px;
-    border:1px solid black;
     display:inline-block;
     margin-right:10px;
+}
+
+
+@media only screen and (max-width : 768px) {
+    .page_nav{
+        position:inherit;
+        opacity:1;
+    }
+    .mainLogo{
+        display:none;
+    }
+    .page__nav-ul{
+        padding: 1.5em;
+        background-color:#FFF;
+        display: none !important;
+    }
+    .page__nav-li{
+        border-bottom:1px solid black;
+        display:block;
+        float:none;
+        font-size:.7em;
+        padding: none;
+    }
+    .page__nav-hamburger{
+        margin: 0 auto;
+        display:block;
+    }
+    
+}
+
+@media only screen and (min-width : 769px) {
+    .page__nav-hamburger{
+        display:none;
+    }
 }

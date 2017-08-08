@@ -25,8 +25,8 @@ gulp.task('images', function(){
 });
 
 gulp.task('copy', function(){
-    return gulp.src('app/*.html')
-        .pipe(gulp.dest('dist'))
+    return gulp.src('app/**/*.+(html|js)')
+		.pipe(gulp.dest('dist'))
         .pipe(browserSync.stream())
 });
 
@@ -41,5 +41,5 @@ gulp.task('browserSync', function(){
 
 gulp.task('watch', ['browserSync', 'css'], function(){
     gulp.watch('app/sass/**/*.scss', ['css'])
-    gulp.watch('app/*.html', ['copy'])
+    gulp.watch('app/**/*.+(html|js)', ['copy'])
 });

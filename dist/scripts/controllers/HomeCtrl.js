@@ -5,9 +5,9 @@
         this.novels = books;
         this.test = 5;
         var counter = 0;
+         
         
-        
-        this.cycle = function(){
+        this.cycleUp = function(){
             counter ++;
             if(counter >= this.novels.length){
                 counter = 0;
@@ -19,6 +19,18 @@
             this.bookBuy = this.novels[counter].amazon;
         }
         
+        this.cycleDown = function(){
+            counter --;
+            if(counter < 0){
+                counter = this.novels.length-1;
+            }
+            console.log(counter);
+            this.bookName = this.novels[counter].name;
+            this.bookCover = this.novels[counter].image;
+            this.bookDesc = this.novels[counter].description;
+            this.bookBuy = this.novels[counter].amazon;
+        }
+         
         this.bookName = this.novels[0].name;
         this.bookCover = this.novels[0].image;
         this.bookDesc = this.novels[0].description;
