@@ -5,31 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>CJR Books</title>
     <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/bootstrap-css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css?family=Crimson+Text|Raleway" rel="stylesheet">
-    <script src="https://use.fontawesome.com/8c10bed6cd.js"></script>
     <script src="/scripts/twitter.js"></script>
 </head>
 <body>
-    <div class="container">
-        <header class="fixed">
-            <nav class= "page__nav clearfix">
-                <button type="button" class=" page__nav-hamburger" aria-label="Menu">
-                  <span class="glyphicon glyphicon-align-center " aria-hidden="true"></span>
-                </button>
-                <div class="mainLogo pull-left headings">CJR Books</div>
-                <ul class="nav navbar-right main-txt page__nav-ul">
+    <header class="fixed">
+        <nav class= "navbar navbar-default navbar-fixed-top navigation">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <h1 class="navbar-brand logo">CJR Books</h1>
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="sr-only">Toggle Nav</span>
+                    </button>
+                </div>    
+                <ul class="nav navbar-nav navbar-right collapse navbar-collapse">
                     <li class="page__nav-li"><a href="#about">About</a></li>
                     <li class="page__nav-li"><a href="#books">Books</a></li>
                     <li class="page__nav-li"><a href="#contact">Contact</a></li>
                 </ul>
-            </nav>
-            
-        </header>
-         
-        <ui-view></ui-view>
+            </div>
+        </nav>        
+    </header>
     
+    <div class="container">
+        <ui-view></ui-view>
     </div>
 
     <!-- Angular -->
@@ -41,7 +44,10 @@
     <!-- Application Files -->
     <script src="/scripts/app.js"></script>
     <script src="scripts/controllers/HomeCtrl.js"></script>
-    <script src="scripts/main.js"></script>
+    
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="scripts/bootstrap-js/bootstrap.min.js"></script>
 </body>
     
 

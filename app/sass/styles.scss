@@ -1,8 +1,16 @@
+$heading-font: 'Crimson Text', serif;
+$body-font: 'Raleway', sans-serif;
+
+.headings{
+    font-family: $heading-font;
+}
+
 body{
     background-image:url(/images/015.jpg);
     background-attachment: fixed;
     background-position: center;
     background-size:cover;
+    font-family: 'Raleway', sans-serif;;
     
 }
 
@@ -11,16 +19,9 @@ section{
     padding: 1em;
 }
 
-.headings{
-    font-family: 'Crimson Text', serif;
-}
-
-.main-txt{
-    font-family: 'Raleway', sans-serif;
-}
 
 p{
-    font-family: 'Raleway', sans-serif;
+    font-family: $body-font;
 }
 /*Nav*/
 .anchor {
@@ -32,32 +33,32 @@ p{
   visibility: hidden; 
 }
 
-.page__nav{
-    background-color:white;
-    font-size:1.5em;
-    width:90%;
-    margin: 0 auto;
-    position:fixed;
-    z-index: 1;
+nav{
+
+    .page__nav-li{
+        padding-top:1em;
+    }
+
+    .logo{
+        font-family:$heading-font;
+        font-size: 3em;
+    }
+    
+    li{
+        font-family: $body-font;
+    }
+
 }
+
+.navigation{
+    opacity:.8;
+}
+.navigation:hover{
+    opacity:1;
+}
+
 .page__nav-li{
-    padding:1em;
-    display:inline-block;
-    float:left;
-}
-
-.mainLogo{
-    font-size:2em;
-    font-family: 'Crimson Text', serif;
-    text-shadow: 2px 2px 5px #FFF;
-    margin-left:1em;
-    padding-top:.3em;
-}
-
-.page__nav-hamburger{
-    display:inline-block;
-    transition: transform 0.2s ease;
-    margin-bottom: 1em;
+    font-size:1.5em;
 }
 
 
@@ -93,41 +94,37 @@ p{
 .books__all-description{
     max-width: 100%;
     height: auto;
+    
+    .description-arrow-left{
+        position: absolute;
+        top: 50%;
+        left: -2%;
+        font-size:2em;
+    }
+    
+    .description-arrow-right{
+        position: absolute;
+        top: 50%;
+        right: -2%;
+        font-size:2em;
+    }
+    
+    
 }
 
+.books__all-image{
+    
+    .arrow-left{
+        position: absolute;
+        top: 50%;
+        left: -10%;
+    }
 
-.arrow{
-    color:red;
-    opacity:.5;
-    position: absolute;
-    top:49%;
-    left:100%;
-    transform: translate(-50%, -97%);
-}
-
-.arrow:hover{
-    font-size:1.2em;
-    top:49%;
-    left:100%;
-    transform: translate(-51%, -101%);
-    opacity:1;
-}
-
-.arrow-lft{
-    color:red;
-    opacity:.5;
-    position: absolute;
-    top:49%;
-    right:96%;
-    transform:translate(-48%, -97%)
-}
-
-.arrow-lft:hover{
-    font-size:1.2em;
-    opacity: 1;
-    top:49%;
-    right:96%;
-    transform:translate(-49%, -89%)
+    .arrow-right{
+        position: absolute;
+        top: 50%;
+        right: -10%;
+    }
 }
 
 
@@ -142,35 +139,3 @@ p{
 }
 
 
-@media only screen and (max-width : 768px) {
-    .page_nav{
-        position:inherit;
-        opacity:1;
-    }
-    .mainLogo{
-        display:none;
-    }
-    .page__nav-ul{
-        padding: 1.5em;
-        background-color:#FFF;
-        display: none !important;
-    }
-    .page__nav-li{
-        border-bottom:1px solid black;
-        display:block;
-        float:none;
-        font-size:.7em;
-        padding: none;
-    }
-    .page__nav-hamburger{
-        margin: 0 auto;
-        display:block;
-    }
-    
-}
-
-@media only screen and (min-width : 769px) {
-    .page__nav-hamburger{
-        display:none;
-    }
-}
